@@ -7,6 +7,7 @@ import Contents from '../views/admin/Contents.vue'
 import Customers from '../views/admin/Customers.vue'
 import Roles from '../views/admin/Roles.vue'
 import Messages from '../views/admin/Messages.vue'
+import Comments from '../views/admin/Messages.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,6 +45,10 @@ const router = createRouter({
         {
           path:'messages',
           component:Messages
+        },
+        {
+          path:'comments',
+          component:Comments
         },
       ]
     }
