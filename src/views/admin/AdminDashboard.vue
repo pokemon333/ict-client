@@ -3,7 +3,7 @@
 export default {
       data() {
             return{
-                  open :false
+                  open : false
             }
       }
 }
@@ -14,11 +14,11 @@ export default {
 <main>
       <div class="flex w-full">
                               <!-- SIDE BAR -->
-            <div class="flex flex-col w-1/6 text-gray-500 bg-gray-50">
-                  
-                  <h1 class="px-12 pt-4 pb-3 text-xl italic border-b-2 border-gray hover:text-blue-700">
-                        <router-link to="/">FIRST ICT</router-link>
-                  </h1>
+            <div class="flex flex-col w-1/6 text-gray-500 bg-gray-100">
+                              <!-- logo -->
+                  <router-link to="/" class="pt-2 pb-2 text-xl italic border-b-2 px-14 border-gray hover:text-blue-700">
+                        <img src="../../../public/images/logo.png"  class="w-2/3" alt="">
+                  </router-link>
 
                                     <!-- Admin pannel -->
                   <div class="p-3 border-b-2 border-gray px-7">                   
@@ -54,24 +54,24 @@ export default {
                                     
                   
             </div>
-                              <!-- MAIN FEED -->
+                                                                              <!-- MAIN FEED -->
             <div class="w-5/6">
                               <!-- NAV  BAR -->
                   <div class="flex flex-row bg-gray-200 h-14">
                               <!-- search box -->
-                        <form action="" class="flex flex-row w-1/3 p-1 mt-1">
-                              <input type="text" class="w-3/4 p-2 ml-3 border border-transparent border-none rounded caret-gray-400 h-3/4 focus:outline-none" placeholder="search">
-                              <button class="px-2 ml-2 text-gray-500 bg-transparent border border-gray-400 rounded h-3/4 hover:text-white hover:border-transparent hover:bg-gray-700">search</button>
+                        <form action="" class="flex flex-row justify-center w-2/3 p-1 mt-2">
+                              <input type="text" class="w-1/3 p-2 border border-transparent border-none rounded caret-gray-400 h-2/3 focus:outline-none" placeholder="search">
+                              <button class="px-1 ml-2 text-sm text-gray-500 bg-transparent border border-gray-400 rounded h-2/3 hover:text-white hover:border-transparent hover:bg-gray-700">search</button>
                         </form>
                               
                         <!-- noti + profile -->
-                        <div class="flex flex-row justify-end w-2/3">
-                              <div class="flex flex-row w-1/2 mx-4">
-                                    <a href="" class="mx-3 my-5 ml-24 text-gray-500 hover:text-blue-500"><i class="far fa-comment"></i> </a>
+                        <div class="flex flex-row justify-end w-1/3">
+                              <div class="flex flex-row mx-4">
+                                    <a href="" class="mx-3 my-5 ml-16 text-gray-500 hover:text-blue-500"><i class="far fa-comment"></i> </a>
                                     <a href="" class="mx-4 my-5 text-gray-500 hover:text-blue-500"><i class="fas fa-bell"></i> </a>
-                                    <div class="relative flex flex-row mt-1 ml-8">
-                                          <img src="../../../public/images/profile2.webp" class="w-6 h-6 my-3 rounded-full" alt="">
-                                          <p class="m-3 text-xl font-thin text-gray-500 cursor-pointer select-none" @click="open = !open">Zwe Zar Ni <i class="text-sm fa-solid fa-circle-chevron-down text-thin"></i></p>
+                                    <div @click="open = !open" class="relative flex flex-row mt-1 ml-8 cursor-pointer" >
+                                          <img  src="../../../public/images/profile2.webp"  class="w-6 h-6 mt-3 rounded-full" alt="">
+                                          <p  class="m-3 text-xl font-thin text-gray-500 cursor-pointer select-none hover:text-blue-500" >Zwe Zar Ni <i class="text-sm text-gray-500 fa-solid fa-circle-chevron-down text-thin"></i></p>
                                           <button  v-if="open != false" class="absolute w-24 h-8 py-2 text-sm font-bold text-white bg-gray-500 rounded right-4 top-10 hover:bg-gray-800">Log out</button>
 
                                     </div>

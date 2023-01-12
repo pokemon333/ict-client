@@ -1,13 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AdminDashboard from '../views/admin/AdminDashboard.vue'
-import Sliders from '../views/admin/Sliders.vue'
-import Categories from '../views/admin/Categories.vue'
-import Contents from '../views/admin/Contents.vue'
+import Sliders from '../views/admin/sliders/Sliders.vue'
+import Categories from '../views/admin/categories/Categories.vue'
+import Contents from '../views/admin/contents/Contents.vue'
 import Customers from '../views/admin/Customers.vue'
 import Roles from '../views/admin/Roles.vue'
 import Messages from '../views/admin/Messages.vue'
 import Comments from '../views/admin/Messages.vue'
+import ShowCategory from '../views/admin/categories/ShowCategory.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -28,7 +29,13 @@ const router = createRouter({
         },
         {
           path:'categories',
-          component:Categories
+          component:Categories,
+          children:[
+            {
+              path:'show',
+              component:ShowCategory
+            }
+          ]
         },
         {
           path:'contents',
