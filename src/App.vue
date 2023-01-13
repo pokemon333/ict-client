@@ -1,11 +1,18 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <router-view />
 </template>
-
+<script>
+import axios from "axios";
+export default {
+  mounted() { 
+    axios
+      .get("http://localhost:8000/api/admin/sliders")
+      .then(function(response) {
+        console.log(response.data);
+      });
+  }
+};
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
